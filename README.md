@@ -26,6 +26,16 @@ python fit_nerv_ssim.py img_label_demo.pth 0 46
 python train_segresnet.py img_label_demo.pth 0 46 8 122 1
 ```
 The implicit neural obfuscation is very quick, the segmentation network may take 15-20 minutes.
+Finally you can evaluate the outcome on 16 validation cases using:
+```
+python run_inference_to_png.py
+```
+This produces a validation Dice of approx. 81% and a folder with 16 example outputs (left ground truth image and label, right NeRVed scan and predicted label).
+![visual](https://github.com/mattiaspaul/neuralObfuscation/blob/main/example_segout_0.png?raw=true)
+
+If you have any questions feel free to email me at firstname.heinrich@uni-luebeck.de
+ToDo: provide code for siamese re-identification network plus evaluation.
+
 
 
 
