@@ -91,7 +91,7 @@ def main(data_file,gpu_num,N_case,rho,N_train,steps):
                                     +torch.randn(batch_size,2,3)*.07,(batch_size,1,384,384),align_corners=False).cuda()
                         input = transforms_train(F.grid_sample(img_nerv[idx_case,0].unsqueeze(1).cuda(),\
                                                                affine,align_corners=False)).flip(flips)
-                        distmap0 = F.grid_sample(img_nerv[idx_case,:1].cuda(),affine,align_corners=False).flip(flips)
+                        distmap0 = F.grid_sample(img_label[idx_case,:1].cuda(),affine,align_corners=False).flip(flips)
                         distmap1 = 20*F.avg_pool2d(F.avg_pool2d(distmap0,15,stride=1,padding=7),15,stride=1,padding=7)
                     output = net(input)
                     onehot_pred = 20*F.avg_pool2d(F.avg_pool2d(F.sigmoid(output),15,stride=1,padding=7),15,stride=1,padding=7)
