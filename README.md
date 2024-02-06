@@ -33,6 +33,9 @@ python run_inference_to_png.py
 This produces a validation Dice of approx. 81% and a folder with 16 example outputs (left ground truth image and label, right NeRVed scan and predicted label).
 ![visual](https://github.com/mattiaspaul/neuralObfuscation/blob/main/example_segout_0.png?raw=true)
 
+For the third part: re-identification risk assessment, we provide another demo-dataset that is derived from the NLST2023 challenge dataset of Learn2Reg, which comprises 220 patients with two lung CTs, which we convert into digitally reconstructed radiographs (DRRs). The provided jupyter notebook gives details on how we train the siamese network with InfoNCE and evaluate re-ID risk using 15-fold test-time augmentation. In line with our more ellaborate results in the paper, we achive a substantial improvement in reducing such risks with hires-image baseline:  top1 53.12% and top5 72.92% being reduced to NeRV (rho=0.08) with top1 39.58% and top5 53.12%.
+ 
+
 If you have any questions feel free to email me at firstname.heinrich@uni-luebeck.de
 ToDo: provide code for siamese re-identification network plus evaluation.
 
