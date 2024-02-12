@@ -37,7 +37,7 @@ For the third part: re-identification risk assessment, we provide another demo-d
  
 
 If you have any questions feel free to email me at firstname.heinrich@uni-luebeck.de
-ToDo: provide code for siamese re-identification network plus evaluation.
+ToDo: provide code for pre-processing RANZR-CLiP data.
 
 
 
